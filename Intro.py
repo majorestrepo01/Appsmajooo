@@ -11,33 +11,34 @@ st.set_page_config(
 # 2. Estilos CSS Personalizados
 st.markdown("""
     <style>
-    /* Estilo del encabezado principal con degradado */
+    /* Estilo del banner principal con degradado y color bonito */
     .header-frame {
         position: relative;
-        padding: 25px;
-        border-radius: 16px;
-        background: #ffffff;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        margin-bottom: 25px;
-        border: 3px solid transparent;
-        background-clip: padding-box;
+        padding: 30px;
+        border-radius: 20px;
+        /* Fondo con degradado moderno púrpura/azul */
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+        margin-bottom: 30px;
+        color: white !important;
     }
-    .header-frame::before {
-        content: '';
-        position: absolute;
-        top: -3px; right: -3px; bottom: -3px; left: -3px;
-        z-index: -1;
-        border-radius: 18px;
-        background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+
+    .header-title {
+        margin: 0;
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.15);
     }
-    @media (prefers-color-scheme: dark) {
-        .header-frame {
-            background: #0e1117;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
+
+    .header-subtitle {
+        margin-top: 10px;
+        font-size: 1.1rem;
+        color: #f3f4f6 !important;
+        opacity: 0.95;
     }
     
-    /* Estilo de Tarjeta adaptable (sin altura fija para evitar cortes de texto) */
+    /* Estilo de Tarjeta adaptable (sin altura fija) */
     .app-card {
         background-color: rgba(255, 255, 255, 0.04);
         border: 1px solid rgba(128, 128, 128, 0.25);
@@ -102,12 +103,16 @@ with st.sidebar:
         "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
         "resulta en una mayor eficiencia y precisión en diversos campos."
     )
+    
+    st.markdown("---")
+    url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
+    st.markdown(f"🔗 **Sitio Oficial:** [Páginas y ejercicios]({url_ia})")
 
-# 4. Encabezado Principal con Marco Degradado
+# 4. Encabezado Principal con Banner de Color Degradado
 st.markdown("""
     <div class="header-frame">
-        <h1 style="margin:0; font-size: 2.3rem;">Mis Aplicaciones de Inteligencia Artificial ✨</h1>
-        <p style="margin-top: 8px; color: #6b7280; font-size: 1.05rem;">
+        <h1 class="header-title">Mis Aplicaciones de Inteligencia Artificial 🤖✨</h1>
+        <p class="header-subtitle">
             Repositorio interactivo de proyectos e interfaces organizadas cronológicamente por fecha de clase.
         </p>
     </div>
