@@ -102,10 +102,6 @@ with st.sidebar:
         "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
         "resulta en una mayor eficiencia y precisión en diversos campos."
     )
-    
-    st.markdown("---")
-    url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
-    st.markdown(f"🔗 **Sitio Oficial:** [Páginas y ejercicios]({url_ia})")
 
 # 4. Encabezado Principal con Marco Degradado
 st.markdown("""
