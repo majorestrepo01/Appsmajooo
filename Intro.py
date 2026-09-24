@@ -37,17 +37,14 @@ st.markdown("""
         }
     }
     
-    /* Estilo de Tarjeta para cada aplicación */
+    /* Estilo de Tarjeta adaptable (sin altura fija para evitar cortes de texto) */
     .app-card {
-        background-color: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(128, 128, 128, 0.2);
-        border-radius: 12px;
-        padding: 16px;
-        height: 140px;
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(128, 128, 128, 0.25);
+        border-radius: 14px;
+        padding: 18px;
         margin-bottom: 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        min-height: 120px;
     }
     .app-card h3 {
         margin: 0 0 8px 0;
@@ -55,8 +52,14 @@ st.markdown("""
     }
     .app-card p {
         margin: 0;
-        font-size: 0.9rem;
-        color: #888;
+        font-size: 0.92rem;
+        line-height: 1.4;
+        color: #6b7280;
+    }
+    @media (prefers-color-scheme: dark) {
+        .app-card p {
+            color: #9ca3af;
+        }
     }
 
     /* Etiqueta de fecha para la fila */
@@ -68,6 +71,22 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 10px;
+    }
+
+    /* Estilo personalizado para los botones de abrir app */
+    .stLinkButton > a {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+        transition: all 0.2s ease-in-out !important;
+    }
+    .stLinkButton > a:hover {
+        background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4) !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -102,7 +121,7 @@ st.markdown("""
 # FILA 1: 20 DE AGOSTO
 # ==========================================
 st.markdown('<div class="section-title">📅 Clase: 20 de Agosto</div>', unsafe_allow_html=True)
-col1, col2, _ = st.columns([1, 1, 2], gap="medium")
+col1, col2, _ = st.columns([1, 1, 1], gap="medium")
 
 with col1:
     st.markdown("""
@@ -128,7 +147,7 @@ st.markdown("---")
 # FILA 2: 27 DE AGOSTO
 # ==========================================
 st.markdown('<div class="section-title">📅 Clase: 27 de Agosto</div>', unsafe_allow_html=True)
-col1, col2, col3, _ = st.columns([1, 1, 1, 1], gap="medium")
+col1, col2, col3 = st.columns([1, 1, 1], gap="medium")
 
 with col1:
     st.markdown("""
@@ -163,7 +182,7 @@ st.markdown("---")
 # FILA 3: 3 DE SEPTIEMBRE
 # ==========================================
 st.markdown('<div class="section-title">📅 Clase: 3 de Septiembre</div>', unsafe_allow_html=True)
-col1, col2, col3, _ = st.columns([1, 1, 1, 1], gap="medium")
+col1, col2, col3 = st.columns([1, 1, 1], gap="medium")
 
 with col1:
     st.markdown("""
@@ -198,7 +217,7 @@ st.markdown("---")
 # FILA 4: 17 DE SEPTIEMBRE
 # ==========================================
 st.markdown('<div class="section-title">📅 Clase: 17 de Septiembre</div>', unsafe_allow_html=True)
-col1, col2, _ = st.columns([1, 1, 2], gap="medium")
+col1, col2, _ = st.columns([1, 1, 1], gap="medium")
 
 with col1:
     st.markdown("""
