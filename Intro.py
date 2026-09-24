@@ -110,7 +110,7 @@ with st.sidebar:
 # 4. Encabezado Principal con Marco Degradado
 st.markdown("""
     <div class="header-frame">
-        <h1 style="margin:0; font-size: 2.3rem;">Mis Aplicaciones de Inteligencia Artificial 🤖✨</h1>
+        <h1 style="margin:0; font-size: 2.3rem;">Mis Aplicaciones de Inteligencia Artificial ✨</h1>
         <p style="margin-top: 8px; color: #6b7280; font-size: 1.05rem;">
             Repositorio interactivo de proyectos e interfaces organizadas cronológicamente por fecha de clase.
         </p>
