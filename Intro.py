@@ -11,14 +11,14 @@ st.set_page_config(
 # 2. Estilos CSS Personalizados
 st.markdown("""
     <style>
-    /* Estilo del banner principal con degradado y color bonito */
+    /* Estilo del banner principal con morado más claro y suave */
     .header-frame {
         position: relative;
         padding: 30px;
         border-radius: 20px;
-        /* Fondo con degradado moderno púrpura/azul */
-        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
-        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+        /* Fondo con degradado morado claro / lila brillante */
+        background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #f472b6 100%);
+        box-shadow: 0 10px 25px rgba(168, 85, 247, 0.25);
         margin-bottom: 30px;
         color: white !important;
     }
@@ -28,13 +28,13 @@ st.markdown("""
         font-size: 2.4rem;
         font-weight: 800;
         color: #ffffff !important;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.12);
     }
 
     .header-subtitle {
         margin-top: 10px;
-        font-size: 1.1rem;
-        color: #f3f4f6 !important;
+        font-size: 1.05rem;
+        color: #ffffff !important;
         opacity: 0.95;
     }
     
@@ -74,20 +74,20 @@ st.markdown("""
         gap: 10px;
     }
 
-    /* Estilo personalizado para los botones de abrir app */
+    /* Estilo personalizado para los botones de abrir app con tono morado claro */
     .stLinkButton > a {
-        background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+        background: linear-gradient(135deg, #a855f7, #c084fc) !important;
         color: white !important;
         border: none !important;
         border-radius: 10px !important;
         font-weight: 600 !important;
-        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+        box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3) !important;
         transition: all 0.2s ease-in-out !important;
     }
     .stLinkButton > a:hover {
-        background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+        background: linear-gradient(135deg, #9333ea, #a855f7) !important;
         transform: translateY(-1px) !important;
-        box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4) !important;
+        box-shadow: 0 6px 15px rgba(168, 85, 247, 0.4) !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -108,10 +108,10 @@ with st.sidebar:
     url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
     st.markdown(f"🔗 **Sitio Oficial:** [Páginas y ejercicios]({url_ia})")
 
-# 4. Encabezado Principal con Banner de Color Degradado
+# 4. Encabezado Principal con Banner Morado Claro
 st.markdown("""
     <div class="header-frame">
-        <h1 class="header-title">Mis Aplicaciones de Inteligencia Artificial 🤖✨</h1>
+        <h1 class="header-title">Mis Aplicaciones de Inteligencia Artificial ✨</h1>
         <p class="header-subtitle">
             Repositorio interactivo de proyectos e interfaces organizadas cronológicamente por fecha de clase.
         </p>
