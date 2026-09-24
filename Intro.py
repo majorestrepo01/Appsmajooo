@@ -43,22 +43,31 @@ st.markdown("""
         border: 1px solid rgba(128, 128, 128, 0.2);
         border-radius: 12px;
         padding: 16px;
-        margin-bottom: 18px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 140px;
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-    .app-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    .app-card h3 {
+        margin: 0 0 8px 0;
+        font-size: 1.15rem;
     }
-    .date-badge {
-        background: linear-gradient(135deg, #4f46e5, #7c3aed);
-        color: white;
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        display: inline-block;
+    .app-card p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #888;
+    }
+
+    /* Etiqueta de fecha para la fila */
+    .section-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-top: 15px;
         margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -84,132 +93,127 @@ st.markdown("""
     <div class="header-frame">
         <h1 style="margin:0; font-size: 2.3rem;">Mis Aplicaciones de Inteligencia Artificial 🤖✨</h1>
         <p style="margin-top: 8px; color: #6b7280; font-size: 1.05rem;">
-            Repositorio con todos los proyectos e interfaces desarrolladas organizados por fecha.
+            Repositorio interactivo de proyectos e interfaces organizadas cronológicamente por fecha de clase.
         </p>
     </div>
 """, unsafe_allow_html=True)
 
+# ==========================================
+# FILA 1: 20 DE AGOSTO
+# ==========================================
+st.markdown('<div class="section-title">📅 Clase: 20 de Agosto</div>', unsafe_allow_html=True)
+col1, col2, _ = st.columns([1, 1, 2], gap="medium")
+
+with col1:
+    st.markdown("""
+    <div class="app-card">
+        <h3>📱 Mi Primera App</h3>
+        <p>Primera aplicación interactiva desarrollada en Streamlit.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://miprimeraappmajo.streamlit.app/", use_container_width=True)
+
+with col2:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🔊 Texto a Audio</h3>
+        <p>Conversión de texto escrito a síntesis de voz mediante IA.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://repositorioprofeinterfaces.streamlit.app/", use_container_width=True)
+
 st.markdown("---")
 
-# 5. Organización en Columnas por Fecha
-col1, col2, col3, col4 = st.columns(4, gap="medium")
+# ==========================================
+# FILA 2: 27 DE AGOSTO
+# ==========================================
+st.markdown('<div class="section-title">📅 Clase: 27 de Agosto</div>', unsafe_allow_html=True)
+col1, col2, col3, _ = st.columns([1, 1, 1, 1], gap="medium")
 
-# --- COLUMNA 1: 20 DE AGOSTO ---
 with col1:
-    st.markdown('<div class="date-badge">📅 20 de Agosto</div>', unsafe_allow_html=True)
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>📱 Mi Primera App</h3>
-            <p>Primera aplicación interactiva desarrollada en Streamlit.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://miprimeraappmajo.streamlit.app/", use_container_width=True)
-    
-    st.write("") # Espaciador
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>🔊 Texto a Audio</h3>
-            <p>Conversión de texto escrito a síntesis de voz mediante IA.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://repositorioprofeinterfaces.streamlit.app/", use_container_width=True)
+    st.markdown("""
+    <div class="app-card">
+        <h3>🌐 Traductor</h3>
+        <p>Herramienta para traducción automática de textos en tiempo real.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://ocr-audio-major.streamlit.app/", use_container_width=True)
 
-# --- COLUMNA 2: 27 DE AGOSTO ---
 with col2:
-    st.markdown('<div class="date-badge">📅 27 de Agosto</div>', unsafe_allow_html=True)
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>🌐 Traductor</h3>
-            <p>Herramienta para traducción automática de textos en tiempo real.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://ocr-audio-major.streamlit.app/", use_container_width=True)
-        
-    st.write("")
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>📄 OCR Tradicional</h3>
-            <p>Extracción automática de texto legible desde imágenes.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://ocr-normal-major.streamlit.app/", use_container_width=True)
-        
-    st.write("")
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>🎙️ OCR + Audio</h3>
-            <p>Extracción de texto desde imágenes y lectura automática en voz alta.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://ocr-audio-major.streamlit.app/", use_container_width=True)
+    st.markdown("""
+    <div class="app-card">
+        <h3>📄 OCR Tradicional</h3>
+        <p>Extracción automática de texto legible desde imágenes.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://ocr-normal-major.streamlit.app/", use_container_width=True)
 
-# --- COLUMNA 3: 3 DE SEPTIEMBRE ---
 with col3:
-    st.markdown('<div class="date-badge">📅 3 de Septiembre</div>', unsafe_allow_html=True)
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>☁️ Wordcloud Studio</h3>
-            <p>Generación y visualización interactiva de nubes de palabras.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://wordcloud-majooooo.streamlit.app/", use_container_width=True)
-        
-    st.write("")
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>🎭 Análisis de Sentimientos</h3>
-            <p>Evaluación del tono emocional e intención en textos.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://sentimenta-majooooo.streamlit.app/", use_container_width=True)
-        
-    st.write("")
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>📊 TF - IDF en Español</h3>
-            <p>Procesamiento de Lenguaje Natural para frecuencia de palabras claves.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://tdfff-majo.streamlit.app/", use_container_width=True)
+    st.markdown("""
+    <div class="app-card">
+        <h3>🎙️ OCR + Audio</h3>
+        <p>Extracción de texto desde imágenes y lectura automática en voz alta.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://ocr-audio-major.streamlit.app/", use_container_width=True)
 
-# --- COLUMNA 4: 17 DE SEPTIEMBRE ---
-with col4:
-    st.markdown('<div class="date-badge">📅 17 de Septiembre</div>', unsafe_allow_html=True)
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>🎯 Detección con YOLO</h3>
-            <p>Reconocimiento y ubicación de múltiples objetos en imágenes.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://yolovmajoo.streamlit.app", use_container_width=True)
-        
-    st.write("")
-    
-    with st.container():
-        st.markdown("""
-        <div class="app-card">
-            <h3>🤖 Teachable Machine</h3>
-            <p>Reconocimiento y clasificación de gestos mediante modelos personalizados.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.link_button("Abrir App 🚀", "https://gestosmajoo.streamlit.app", use_container_width=True)
+st.markdown("---")
 
+# ==========================================
+# FILA 3: 3 DE SEPTIEMBRE
+# ==========================================
+st.markdown('<div class="section-title">📅 Clase: 3 de Septiembre</div>', unsafe_allow_html=True)
+col1, col2, col3, _ = st.columns([1, 1, 1, 1], gap="medium")
 
+with col1:
+    st.markdown("""
+    <div class="app-card">
+        <h3>☁️ Wordcloud Studio</h3>
+        <p>Generación y visualización interactiva de nubes de palabras.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://wordcloud-majooooo.streamlit.app/", use_container_width=True)
+
+with col2:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🎭 Análisis de Sentimientos</h3>
+        <p>Evaluación del tono emocional e intención en textos.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://sentimenta-majooooo.streamlit.app/", use_container_width=True)
+
+with col3:
+    st.markdown("""
+    <div class="app-card">
+        <h3>📊 TF - IDF en Español</h3>
+        <p>Procesamiento de Lenguaje Natural para frecuencia de palabras claves.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://tdfff-majo.streamlit.app/", use_container_width=True)
+
+st.markdown("---")
+
+# ==========================================
+# FILA 4: 17 DE SEPTIEMBRE
+# ==========================================
+st.markdown('<div class="section-title">📅 Clase: 17 de Septiembre</div>', unsafe_allow_html=True)
+col1, col2, _ = st.columns([1, 1, 2], gap="medium")
+
+with col1:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🎯 Detección con YOLO</h3>
+        <p>Reconocimiento y ubicación de múltiples objetos en imágenes.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://yolovmajoo.streamlit.app", use_container_width=True)
+
+with col2:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🤖 Teachable Machine</h3>
+        <p>Reconocimiento y clasificación de gestos mediante modelos personalizados.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://gestosmajoo.streamlit.app", use_container_width=True)
