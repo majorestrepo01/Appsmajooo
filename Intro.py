@@ -249,4 +249,87 @@ col1, col2, _ = st.columns([1, 1, 1], gap="medium")
 with col1:
     st.markdown("""
     <div class="app-card">
-        <h3>💬
+        <h3>💬 ChatPDF (RAG)</h3>
+        <p>Generación aumentada por recuperación para consultar documentos PDF.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://chatpdf-majooooo.streamlit.app", use_container_width=True)
+
+with col2:
+    st.markdown("""
+    <div class="app-card">
+        <h3>👁️ Visión por Computadora</h3>
+        <p>Análisis interpretativo de imágenes usando modelos GPT-4o.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://visionapp-majoooo.streamlit.app", use_container_width=True)
+
+st.markdown("---")
+
+# ==========================================
+# FILA 6: 1 DE OCTUBRE
+# ==========================================
+st.markdown('<div class="section-title">📅 Clase: 1 de Octubre</div>', unsafe_allow_html=True)
+col1, col2, col3 = st.columns([1, 1, 1], gap="medium")
+
+with col1:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🔢 Detección de Dígitos</h3>
+        <p>Reconocimiento de dígitos escritos a mano en tiempo real.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://handwritingmajooo.streamlit.app/", use_container_width=True)
+
+with col2:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🎨 Tablero de Diseño</h3>
+        <p>Lienzo interactivo para dibujo y bocetos de moda/estilo.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://tableromajoo.streamlit.app/", use_container_width=True)
+
+with col3:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🦄 Reconocimiento de Dibujos</h3>
+        <p>Interpretación de bocetos para generación automática de historias.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://drawrecognitionmajo.streamlit.app/", use_container_width=True)
+
+st.markdown("---")
+
+# ==========================================
+# FILA 7: 15 DE OCTUBRE
+# ==========================================
+st.markdown('<div class="section-title">📅 Clase: 15 de Octubre</div>', unsafe_allow_html=True)
+col1, col2, col3 = st.columns([1, 1, 1], gap="medium")
+
+with col1:
+    st.markdown("""
+    <div class="app-card">
+        <h3>📡 Lector de Sensor MQTT</h3>
+        <p>Recepción y monitoreo en tiempo real de datos provenientes de sensores IoT.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://recepmqtt-mjrp.streamlit.app/", use_container_width=True)
+
+with col2:
+    st.markdown("""
+    <div class="app-card">
+        <h3>⚡ Control MQTT</h3>
+        <p>Panel ciberfísico para envío de comandos digitales y analógicos a dispositivos.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://sendcmqtt-mjrp.streamlit.app/", use_container_width=True)
+
+with col3:
+    st.markdown("""
+    <div class="app-card">
+        <h3>🎙️ Control por Voz</h3>
+        <p>Reconocimiento de comandos de voz para transmisión de instrucciones vía MQTT.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Abrir App 🚀", "https://ctrlvoice-mjrp.streamlit.app/", use_container_width=True)
