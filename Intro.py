@@ -237,3 +237,16 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
     st.link_button("Abrir App 🚀", "https://gestosmajoo.streamlit.app", use_container_width=True)
+
+st.markdown("---")
+
+# ==========================================
+# FILA 5: 24 DE SEPTIEMBRE
+# ==========================================
+st.markdown('<div class="section-title">📅 Clase: 24 de Septiembre</div>', unsafe_allow_html=True)
+col1, col2, _ = st.columns([1, 1, 1], gap="medium")
+
+with col1:
+    st.markdown("""
+    <div class="app-card">
+        <h3>💬
